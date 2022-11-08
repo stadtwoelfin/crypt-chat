@@ -1,0 +1,120 @@
+htmla {overflow:hidden;}
+
+body 
+{
+	background-color:lightpink;
+}
+
+#chatfenster {
+	height: 75vh;
+	
+	
+	}
+	
+iframe {border:0px solid blue;}
+
+#input 
+{
+	width:80%;
+}	
+
+ #inputchat {
+	 height:40vh;
+	 width:100%;
+ }
+
+button
+{
+	width:5%;
+position:absolute;
+margin-top:5em;
+background-color:transparent;
+border:none;
+
+}
+
+.chatbutton 
+{
+	width:4em;	
+	margin-top:-3em;
+	margin-left:-0.5em;
+}
+
+.emojibutton 
+{
+	width:4em;	
+	margin-top:0em;
+	margin-left:-0.5em;
+}
+
+#key 
+{
+	margin:0.2em;
+	
+	
+}
+
+#read 
+{
+	margin-top:20%;
+	height:80%;
+	width:100%;
+}
+
+textarea,input
+{
+	border-radius:15px;
+}
+
+textarea 
+{
+ padding:1em;
+}
+
+input {
+padding:0.4em;
+}
+
+
+.splash 
+{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100vw;
+	height:100%;
+	background-color:lightblue!important;
+}
+
+@media only screen and (min-width: 601px) {
+	
+	.chatbutton 
+{
+	width:5em;
+	margin-top:-3em;
+	
+}
+
+
+
+
+#input 
+{
+	width:80%;
+	margin:1em;
+}	
+
+#key 
+{
+	margin-left:0em;
+	margin:1em;
+}
+
+#read 
+{
+	margin-top:20%;
+	height:80%;
+	width:100%;
+}
+
+}

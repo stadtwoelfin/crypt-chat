@@ -1,0 +1,103 @@
+<html><head>
+<title>Alpha Crypt--Strong Text Encryption</title>
+<script type="text/javascript" src="alphac.js"></script>
+<script type="text/javascript" src="md5.js"></script>
+<script type="text/javascript" src="timer.js"></script>
+<script type="text/javascript">
+function process(on) {
+var fe = document.fe;
+var ke = fe.key.value;
+var re = fe.re;
+var f = timer(function() {
+re.value = alphac(re.value, ke, md5(ke), on)
+});
+var t = f();
+var d = re.value.length;
+var r = Math.round(d / t * 1000);
+fe.time.value = r + 'B/s ' + t + 'ms ' + d + 'B';
+}
+</script>
+</head>
+<body>
+<h1>Alpha Crypt Text Message Encryptor</h1>
+<p><strong>Alpha Crypt</strong> uses MD5 cryptographic signatures
+on top of an XOR text encryption algorithm to form a
+<strong>practically unbreakable hybrid</strong>.</p>
+<h2>Features</h2>
+<p>Alpha Crypt uses MD5 cryptographic signatures on top of an XOR text encryption algorithm. It is designed for sending messages from anywhere on the Internet, without access to other encryption software. AC will not become confused by text wrapping, missing text, or other mistakes that occur during transmission. By running along a 64-character set, it will not garble binary values, or cause a browser to crash. For this reason, it is especially suited for public free email providers.</p>
+<h3>Security</h3>
+<p>Alpha Crypt defeats word-based or probability-based attacks,
+as well as overcoming methods which measure statistics based on consistent
+input-output.</p>
+<h3>Speed</h3>
+<p>Alpha Crypt is faster than other programs, by reducing
+cryptology running time primarily to internal bit operations,
+compatible with JavaScript browsers, instead of auxiliary
+functions.</p>
+<h2>Encrypt or decrypt messages</h2>
+<form action="?" name="fe"
+onsubmit="process(window.a=!window.a); return false">
+<div align="center">
+<textarea rows="12" cols="64" name="re">
+Type or paste here.
+</textarea>
+<p>
+Key: <input type="text" name="key" size="24" />
+Time: <input type="text" name="time" size="24" /><br />
+<input type="button" value="Encrypt"
+onclick="process(1)" />
+<input type="button" value="Decrypt"
+onclick="process(0)" />
+<input type="reset" value="Reset" />
+</p>
+</div>
+</form>
+<p>Alpha Crypt is offered as-is, without warranty. Although I
+would feel safe in saying that no one can read a message I
+send with Alpha Crypt, I do not wish to make any legally
+binding guarantees, express or implied. You have the freedom
+to be secure, but freedom is also your own responsibility.
+I take no liability from any use of this software.</p>
+<h3>Instructions</h3>
+<p>If you plan on emailing the contents of an encrypted
+message, you may wish to include the following note with
+the encrypted text:</p>
+<p><samp>
+Note: This message was encrypted with Alpha Crypt for safe
+transmission. Select and copy the message text, and visit
+<script type="text/javascript">
+document.write(location.href);
+</script>
+to decrypt the message (a password key is required).</samp></p>
+<p>In order to distribute the load from many people using
+Alpha Crypt, this message is dynamically updated to show the
+current URL. This way, many websites may post these files
+and share Alpha Crypt. However, if you wish, you may also
+use the master url:</p>
+<pre>
+http://www.myersdaily.org/joseph/javascript/alphac.html Alpha Crypt by Joseph Myers
+<code>
+&lt;a href="http://www.myersdaily.org/joseph/javascript/alphac.html">Alpha
+Crypt by Joseph Myers&lt;/a>
+</code>
+</pre>
+<h2>Notes</h2>
+<p>For distribution, a zip file is available,
+<a href="http://www.myersdaily.org/joseph/javascript/alphacrypt2.zip">alphacrypt2.zip</a>
+(5.15 KB: contains alphac.html, timer.js, md5.js, and alphac.js).</p>
+<h3>Libraries used</h3>
+<p>Originally from
+<a href="http://www.myersdaily.org/joseph/javascript/alphac.html">Alpha
+Crypt by Joseph Myers</a>.
+<a href="http://www.myersdaily.org/joseph/javascript/md5-text.html">MD5 code (md5.js) by Joseph Myers</a>
+is based on md5.js by Paul Johnston and Greg Holt.</p>
+<p>Modified copies of programs in this list are used:</p>
+<ul>
+<li>alphac.js</li>
+<li>md5.js</li>
+<li>timer.js</li>
+</ul>
+<address><a href="http://josephmyers.com/">Joseph K. Myers</a>,
+2002/10/10, v.2 2003/11/13,
+cookies @ users.sourceforge.net.</address>
+</body></html>
